@@ -1,0 +1,29 @@
+.apportBlock {
+
+    .apportAside {
+        background: #FBFBFB;
+        border-radius: 5px;
+        margin-bottom: 40px;
+        width: 260px;
+        display: flex;
+        align-items: center;
+        padding: 32px;
+
+        .iconApport {
+            height: 60px;
+            width: 60px;
+            border-radius: 5px;
+            margin-right: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #74798C;
+        }
+    }
+}

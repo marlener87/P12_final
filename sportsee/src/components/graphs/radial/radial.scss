@@ -1,0 +1,55 @@
+.graphiqueRadial {
+    width: 258px;
+    height: 263px;
+    background: #FBFBFB;
+    border-radius: 5px;
+    position: relative;
+
+    .titleRadial {
+        position: absolute;
+        margin-top: 24px;
+        margin-left: 30px;
+
+        h2 {
+            font-size: 15px;
+        }
+    }
+
+    .pourcentage {
+        position: absolute;
+        z-index: 1; /* Lower z-index to be behind the chart */
+        background-color: white;
+        width: 159px;
+        height: 159px;
+        border-radius: 50%;
+        top: 50px;
+        left: 50px;
+
+        .textContainer {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color:#74798C;
+            font-size: 16px;
+            width: 100px;
+            top: 50px;
+            left: 25px;
+
+            .nombreScore {
+                color: #282D30;
+                font-size: 26px;
+                font-weight: 700;
+            }     
+        }
+
+        
+    }
+
+    .recharts-wrapper {
+        z-index: 2; /* Ensure the chart has a higher z-index */
+        position: relative;
+    }
+}

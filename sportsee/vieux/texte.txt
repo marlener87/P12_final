@@ -1,0 +1,97 @@
+Le code des éléments graphiques peut être validé si :
+
+ ❒ Le projet utilise une librairie graphique (D3 ou Recharts) pour implémenter les 4 graphiques du tableau de bord.
+
+ ❒  Le projet respecte la maquette Figma tant au niveau des charts que des deux navigations.
+
+ ❒ Le projet est utilisable sur les résolutions d’au moins 1024 par 780 pixels.
+
+ ❒ Le projet comprend un package.json contenant les librairies installées. Les librairies ne sont pas installées de manière globale. 
+
+ ❒ Les graphiques du projet sont fidèles à la maquette.
+
+ 
+
+Interagir avec un service web
+Le code de l’API peut être validé si :
+
+ ❒ Les données sont récupérées auprès de l’API.
+
+ ❒ L’étudiant utilise soit l’API Fetch, soit la librairie axios.
+
+ ❒ Les calls API ont été réalisés dans un service situé en dehors d’un composant React.
+
+ ❒ Les cas d’erreurs (indisponibilité de l’API) ne font pas planter le site. Dans le cas d’une indisponibilité, un message d’erreur est affiché. 
+
+ 
+
+Assurer la qualité des données dans une application web
+Le code peut être validé si :
+
+ ❒ Les données récupérées sont transformées en JSON.
+
+ ❒ Une classe de modélisation permet de formater les données une fois récupérées auprès de l’API.
+
+ ❒ Quelles que soient les données envoyées (mockées ou de l’API), ces dernières complètent les charts.
+
+ ❒ L’étudiant peut changer la source des données (les données mockées et les données de l’API) en changeant uniquement le service utilisant l’API et la classe de modélisation. Le code des composants ne doit pas être changé.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Dans le cadre de ce projet, vous serez évalué sur différents critères pour vérifier votre maîtrise des compétences requises. Voici les principaux critères d'évaluation :
+
+
+
+
+Respect des spécifications fonctionnelles : Votre application doit répondre aux exigences décrites dans les spécifications fonctionnelles. Assurez-vous de bien comprendre les fonctionnalités attendues et de les implémenter correctement.
+
+
+
+
+Qualité et organisation du code : Votre code doit être propre, lisible et bien organisé. Utilisez une structure modulaire, respectez les conventions de nommage et suivez les bonnes pratiques du langage de programmation que vous utilisez.
+
+
+
+
+Utilisation des technologies et des bibliothèques : Utilisez les bonnes technologies et les bibliothèques adaptées pour développer votre projet. Assurez-vous de bien maîtriser les outils et les bibliothèques que vous utilisez, notamment React, Recharts ou D3 et Fetch ou Axios.
+
+
+
+
+Intégration de l'API : Vous devez intégrer l'API en effectuant les appels HTTP appropriés pour récupérer les données nécessaires. Assurez-vous de bien comprendre la structure des données de l'API et de les formater correctement dans votre application.
+
+
+
+
+Interface utilisateur : La page du profil utilisateur doit être conviviale, ergonomique et esthétiquement agréable. Assurez-vous que les interactions utilisateur soient intuitives et que les informations soient bien présentées à l'aide de graphiques et de diagrammes.
+
+
+
+
+Documentation : Votre projet doit être bien documenté. Fournissez un Readme complet décrivant l'installation, les fonctionnalités et la façon d'utiliser votre application. N'oubliez pas de commenter votre code pour en faciliter la compréhension.
+
+
+
+
+Respect des délais : Le respect des délais est également pris en compte dans l'évaluation de votre projet. Assurez-vous de suivre les étapes du projet dans les délais impartis et de soumettre votre travail à temps.
+
+
+
+
+Présentation orale : Lors de la soutenance, vous devrez présenter votre projet au jury. Soyez clair, structuré et concis dans votre présentation. Soyez prêt à répondre aux questions et à défendre vos choix techniques.
+
+
+
+
+Ces critères d'évaluation vous permettront de démontrer votre capacité à développer une application web performante, fonctionnelle et esthétiquement réussie. N'hésitez pas à vous appuyer sur les ressources fournies par OpenClassrooms pour approfondir vos connaissances et réussir votre projet. Bon courage !

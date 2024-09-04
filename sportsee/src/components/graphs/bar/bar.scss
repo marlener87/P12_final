@@ -1,0 +1,112 @@
+@import '../../../styles/variables.scss';
+
+.customTooltipBar {
+    background-color: $red;
+    padding: 10px 5px;
+    color: $white;
+    font-size: 8px;
+    text-align: center;
+
+    .textTooltip {
+        margin-bottom: 20px;
+    }
+}  
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $cream;
+    width: 835px;
+    height: 320px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+    .titleApp {
+        display: flex;
+        justify-content: space-between;
+        margin: 24px 32px;
+        width: 770px;
+        
+        h2 {
+            font-size: 15px;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            list-style: none;
+
+            .itemRed::before, .itemBlack::before {
+                content: '';
+                display: inline-block;
+                width: 10px;    // Adjust the size of the circle
+                height: 10px;   // Adjust the size of the circle
+                border-radius: 50%;
+                margin-right: 10px; // Space between the circle and the text
+            }
+
+            .itemBlack::before {
+                background-color: $black; // The color for the 'Poids (kg)' item
+            }
+
+            .itemRed::before {
+                background-color: $red; // The color for the 'Poids (kg)' item
+            }
+        }
+    }
+
+    .recharts-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .recharts-surface {
+            .recharts-cartesian-grid {
+                .recharts-cartesian-grid-vertical line {
+                    stroke: $cream;
+                }
+            }
+
+            .recharts-yAxis {
+                .recharts-cartesian-axis-line {
+                    stroke: $cream;
+                }
+                .recharts-cartesian-axis-ticks {
+                    .recharts-cartesian-axis-tick {
+                        .recharts-cartesian-axis-tick-line {
+                            stroke: $cream;
+                        }
+                    }          
+                }
+            }
+
+            .recharts-xAxis {
+                .recharts-cartesian-axis-ticks {
+                    .recharts-cartesian-axis-tick {
+                        .recharts-cartesian-axis-tick-line {
+                            stroke: $cream;
+                        }
+                    }
+                }
+            }
+        }
+
+        .recharts-layer {
+            .recharts-bar-rectangles {
+                .recharts-bar-rectangle {
+                    .recharts-rectangle {
+                        width: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+    .recharts-legend-wrapper {
+        .recharts-default-legend {
+            display: none;
+        }
+    }
+}

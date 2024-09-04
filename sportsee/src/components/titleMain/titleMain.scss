@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.titleSection {
+    h1 {
+        font-size: 48px;
+
+        .prenomValeur {
+            color: red;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        margin: 40px 0 80px;
+    }
+}
+
+

@@ -1,0 +1,10 @@
+.titleSection h1 {
+  font-size: 48px;
+}
+.titleSection h1 .prenomValeur {
+  color: red;
+}
+.titleSection p {
+  font-size: 18px;
+  margin: 40px 0 80px;
+}/*# sourceMappingURL=titleMain.css.map */

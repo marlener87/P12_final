@@ -18,16 +18,18 @@
     flex-direction: column;
     align-items: center;
     background: $cream;
-    width: 835px;
-    height: 320px;
+    //width: 835px;
+    width: 100%;
+    //height: 320px;
     margin-bottom: 30px;
     border-radius: 5px;
 
     .titleApp {
         display: flex;
         justify-content: space-between;
-        margin: 24px 32px;
-        width: 770px;
+        //margin: 24px 32px;
+        margin: 10px 0;
+        //width: 770px;
         
         h2 {
             font-size: 15px;

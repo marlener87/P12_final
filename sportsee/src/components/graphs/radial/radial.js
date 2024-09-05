@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RadialBarChart, RadialBar, ResponsiveContainer } from 'recharts';
 import './radial.scss';
-//import { fetchUserData } from '../../../service/api';
 import UserService from '../../../services/userService';
 
 /**
@@ -17,14 +16,9 @@ const Radial = ({ userId }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
-    /**
-     * Hook `useEffect` pour récupérer le score de l'utilisateur dès que le composant est monté
-     * ou que l'ID de l'utilisateur change.
-     */
+    // Hook `useEffect` pour récupérer le score de l'utilisateur dès que le composant est monté ou que l'ID de l'utilisateur change.
     useEffect(() => {
-        /**
-         * Fonction asynchrone pour récupérer le score de l'utilisateur depuis le service utilisateur.
-         */
+        // Fonction asynchrone pour récupérer le score de l'utilisateur depuis le service utilisateur.
         const fetchData = async () => {
             const objectFromFactory = await UserService.getScore(userId);
             //console.log(objectFromFactory);
@@ -45,7 +39,6 @@ const Radial = ({ userId }) => {
     }
 
     // Affiche un message d'erreur en cas de problème lors de la récupération des données
-
     if(isError){
         return <p>Une erreur est survenue...</p>
     }

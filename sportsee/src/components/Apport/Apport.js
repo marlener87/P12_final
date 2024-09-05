@@ -48,24 +48,19 @@ const Apport = ({userId}) => {
 
     }, [userId])
 
-    /**
-     * Affiche un message de chargement si les données sont en cours de récupération.
-     */
+
+    // Affiche un message de chargement si les données sont en cours de récupération.
     if(isLoading) {
         return <p>Chargement en cours...</p>
     }
 
-    /**
-     * Affiche un message d'erreur si une erreur s'est produite lors de la récupération des données.
-     */
+    // Affiche un message d'erreur si une erreur s'est produite lors de la récupération des données.
     if(isError){
         return <p>Une erreur est survenue...</p>
     }
 
     // Je veux parcourir des données, et demander un affichage
-    /**
-     * Affiche la liste des apports de l'utilisateur.
-     */
+    // Affiche la liste des apports de l'utilisateur.
     return (
         <div className='apportBlock'>
             {userFactory.getApports().map((item, index) => (

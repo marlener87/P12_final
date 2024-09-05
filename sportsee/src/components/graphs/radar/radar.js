@@ -15,14 +15,9 @@ const RadarGraph = ({ userId }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
-    /**
-     * Hook `useEffect` pour récupérer les données de performance de l'utilisateur
-     * dès que le composant est monté ou que l'ID de l'utilisateur change.
-     */
+    // Hook `useEffect` pour récupérer les données de performance de l'utilisateur dès que le composant est monté ou que l'ID de l'utilisateur change.
     useEffect(() => {
-        /**
-         * Fonction asynchrone pour récupérer les données de performance depuis le service utilisateur.
-         */
+        // Fonction asynchrone pour récupérer les données de performance depuis le service utilisateur.
         const fetchData = async () => {
             const objectFromFactory = await UserService.getPerformance(userId)
             //console.log(objectFromFactory)

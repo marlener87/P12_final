@@ -36,14 +36,9 @@ const App = ({ userId }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
-    /**
-     * Hook `useEffect` pour récupérer les données d'activité de l'utilisateur
-     * dès que le composant est monté ou que l'ID de l'utilisateur change.
-     */
+    // Hook `useEffect` pour récupérer les données d'activité de l'utilisateur dès que le composant est monté ou que l'ID de l'utilisateur change.
     useEffect(() => {
-        /**
-         * Fonction asynchrone pour récupérer les données d'activité depuis le service utilisateur.
-         */
+        // Fonction asynchrone pour récupérer les données d'activité depuis le service utilisateur.
         const fetchData = async () => {
             // Appel du service pour récupérer les données d'activité de l'utilisateur
             const objectFromFactory = await UserService.getActivity(userId);
@@ -79,8 +74,8 @@ const App = ({ userId }) => {
             </div>
             
             <BarChart
-                width={800}
-                height={250}
+                width={700}
+                height={200}
                 data={userActivityFactory.sessions}
                 margin={{
                     top: 5, right: 0, left: 20, bottom: 5,

@@ -12,11 +12,15 @@ main {
                 display: flex;
                 
                 .stats {
-                    width: 835px;
+                    //width: 835px;
+                    width: 100%;
                     margin-right: 30px;
 
                     .blockGraphs {
-                        display: flex;
+                        //display: flex;
+                        display: grid;
+                        grid-template-columns: repeat(3, 30%); // Définit 3 colonnes de taille égale
+                        gap: 20px; // Espace entre les éléments (facultatif)
                     }
                 }
             }

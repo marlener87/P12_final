@@ -9,21 +9,70 @@
         align-items: center;
         padding: 32px;
 
+        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+            border-radius: 3px;
+            width: 150px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
         .iconApport {
             height: 60px;
             width: 60px;
             border-radius: 5px;
             margin-right: 24px;
+
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                width: 35px;
+                height: 35px;
+                margin-right: 10px;
+            }
         }
 
         h2 {
             font-size: 20px;
             margin-bottom: 10px;
+
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                font-size: 13px;
+                margin-bottom: 3px;
+            }
         }
 
         p {
             font-size: 14px;
             color: #74798C;
+
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                font-size: 10px;
+            }
         }
     }
 }
+
+// .apportBlock {
+//     .apportAside {
+//         background: #FBFBFB;
+//         border-radius: 5px;
+//         display: flex;
+//         padding: 25%;
+//         margin-bottom: 20%;
+//     }
+
+//     .iconApport {
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 5px;
+//         margin-right: 24px;
+//     }
+
+//     h2 {
+//         font-size: 125%;
+//         margin-bottom: 10px;
+//     }
+
+//     p {
+//         font-size: 100%;
+//         color: #74798C;
+//     }
+// }

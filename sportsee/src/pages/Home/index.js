@@ -17,6 +17,7 @@ import Radial from '../../components/graphs/radial/radial';
  * @returns {JSX.Element} - Le rendu du composant `Home`.
  */
 const Home = () => { 
+    
     // Identifiant de l'utilisateur utilisé pour récupérer les données
     const userId = 12; 
 

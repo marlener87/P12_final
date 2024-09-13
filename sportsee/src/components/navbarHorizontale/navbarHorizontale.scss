@@ -1,28 +1,95 @@
 @import '../../styles/variables.scss';
 
+// .headerHorizontal {
+//     background: $black;
+//     //display: flex;
+//     display: grid;
+//     //grid-template-columns: 1fr 5fr;
+//     grid-template-columns: 20% 60%;
+//     align-items: center;
+//     padding: 10px 0 5px 20px;
+//     width: 50%;
+//     min-width: 1024px;
+
+//     .logo {
+//         //height: 60px;
+//         width: 50%;
+//     }
+
+//     .navHorizontale {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+
+//         .navbarLink {
+//             color: $white;
+//             text-decoration: none;
+//             //font-size: 24px;
+//         }
+        
+//     }
+// }
+
+
+
+
+// .headerHorizontal {
+//     background: $black;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 1em 4em 0.5em 1em;
+
+//     .logo {
+//         width: 10%;
+//     }
+
+//     .navbarLink {
+//         color: $white;
+//         text-decoration: none;
+//         font-size: 70%;
+
+//     }
+// }
+
+
 .headerHorizontal {
     background: $black;
-    //display: flex;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     align-items: center;
     padding: 20px 90px 20px 30px;
     width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); // Ajout d'un ombrage léger sous le bas
 
-    .logo {
-        height: 60px;
-    }
-
-    .navHorizontale {
+    //@media screen and (min-width: 1024px) { 
+    @media only screen and (min-width: 1024px) and (max-width: 1200px) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0.6em 4em 0.5em 1em;
+        //max-width: 750px;
+        //min-width: 1024px;
+    }
+
+    .logo {
+        height: 60px;
+
+        //@media screen and (min-width: 1024px) { 
+        @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+            height: 30px;
+        }
+    }
 
         .navbarLink {
             color: $white;
             text-decoration: none;
             font-size: 24px;
+
+            //@media screen and (min-width: 1024px) { 
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+                font-size: 10px;
+            }
         }
-        
-    }
 }

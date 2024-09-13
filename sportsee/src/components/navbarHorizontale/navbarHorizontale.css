@@ -1,16 +1,5 @@
 .headerHorizontal {
   background: black;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px 90px 20px 30px;
-}
-.headerHorizontal .logo {
-  height: 60px;
-}
-.headerHorizontal .navHorizontale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,9 +9,13 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1em 4em 0.5em 1em;
 }
-.headerHorizontal .navHorizontale .navbarLink {
+.headerHorizontal .logo {
+  width: 10%;
+}
+.headerHorizontal .navbarLink {
   color: white;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 70%;
 }/*# sourceMappingURL=navbarHorizontale.css.map */

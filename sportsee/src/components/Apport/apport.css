@@ -1,27 +1,23 @@
 .apportBlock .apportAside {
   background: #FBFBFB;
   border-radius: 5px;
-  margin-bottom: 40px;
-  width: 260px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 32px;
+  padding: 25%;
+  margin-bottom: 20%;
 }
-.apportBlock .apportAside .iconApport {
-  height: 60px;
-  width: 60px;
+.apportBlock .iconApport {
+  height: 100%;
+  width: 100%;
   border-radius: 5px;
   margin-right: 24px;
 }
-.apportBlock .apportAside h2 {
-  font-size: 20px;
+.apportBlock h2 {
+  font-size: 125%;
   margin-bottom: 10px;
 }
-.apportBlock .apportAside p {
-  font-size: 14px;
+.apportBlock p {
+  font-size: 100%;
   color: #74798C;
 }/*# sourceMappingURL=apport.css.map */

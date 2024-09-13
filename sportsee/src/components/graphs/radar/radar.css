@@ -4,7 +4,6 @@
   background: #282D30;
   color: white;
   border-radius: 5px;
-  margin-right: 30px;
 }
 .graphiqueRadar .recharts-responsive-container .recharts-wrapper .recharts-surface .radiusAxis {
   display: none;

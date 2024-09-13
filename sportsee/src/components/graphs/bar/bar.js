@@ -40,18 +40,29 @@ const App = ({ userId }) => {
     useEffect(() => {
         // Fonction asynchrone pour récupérer les données d'activité depuis le service utilisateur.
         const fetchData = async () => {
-            // Appel du service pour récupérer les données d'activité de l'utilisateur
-            const objectFromFactory = await UserService.getActivity(userId);
-            console.log(objectFromFactory);
-            
-            // Mise à jour de l'état avec les données récupérées
-            setUserActivityFactory(objectFromFactory);
-            setIsLoading(false);
-        }
-      
-        fetchData()
+            try {
+                // Appel du service pour récupérer les données d'activité de l'utilisateur
+                const objectFromFactory = await UserService.getActivity(userId);
+                console.log(objectFromFactory);
 
-    }, [userId]); // Dépendance sur l'userId, le hook se ré-exécutera si l'userId change
+                // Transformation des dates en numéros de jours
+                const transformedData = objectFromFactory.sessions.map((session, index) => ({
+                    ...session,
+                    day: index + 1 // Transformation de la date en numéro de jour
+                }));
+                
+                // Mise à jour de l'état avec les données transformées
+                setUserActivityFactory({ ...objectFromFactory, sessions: transformedData });
+                setIsLoading(false);
+            } catch (error) {
+                setIsError(true);
+                setIsLoading(false);
+            }
+        }
+
+        fetchData();
+
+    }, [userId]);
 
     // Affiche un message de chargement si les données sont en cours de récupération
     if(isLoading) {
@@ -78,7 +89,7 @@ const App = ({ userId }) => {
                 height={200}
                 data={userActivityFactory.sessions}
                 margin={{
-                    top: 5, right: 0, left: 20, bottom: 5,
+                    top: 0, right: 0, left: 0, bottom: 0,
                 }}
             >
                 <CartesianGrid strokeDasharray="3 3" />

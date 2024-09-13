@@ -8,13 +8,28 @@
     border-radius: 5px;
     position: relative;
 
+    @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+        width: 130px;
+        height: 130px;
+        border-radius: 3px;
+        background: teal;
+    }
+
     .titleRadial {
         position: absolute;
         margin-top: 24px;
         margin-left: 30px;
 
+        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+
         h2 {
             font-size: 15px;
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                font-size: 10px;
+            }
         }
     }
 
@@ -27,6 +42,13 @@
         border-radius: 50%;
         top: 50px;
         left: 50px;
+
+        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+            width: 80px;
+            height: 80px;
+            top: 25px;
+            left: 25px;
+        }
 
         .textContainer {
             position: absolute;
@@ -41,10 +63,21 @@
             top: 50px;
             left: 25px;
 
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                font-size: 8px;
+                width: 50px;
+                top: 20px;
+                left: 15px;
+            }
+
             .nombreScore {
                 color: #282D30;
                 font-size: 26px;
                 font-weight: 700;
+
+                @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                    font-size: 15px;
+                }
             }     
         }
 

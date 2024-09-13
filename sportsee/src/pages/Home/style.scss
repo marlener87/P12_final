@@ -1,6 +1,40 @@
 @import '../../styles/variables.scss';
 
+// main {
+//     .mainBody {
+//         display: flex;
+
+//         .sectionRight {
+//             //padding: 50px 70px;
+//             padding: 60px 100px;
+
+//             .statsBlock {
+//                 display: flex;
+                
+//                 .stats {
+//                     //width: 835px;
+//                     width: 100%;
+//                     margin-right: 30px;
+
+//                     .blockGraphs {
+//                         //display: flex;
+//                         display: grid;
+//                         grid-template-columns: repeat(3, 30%); // Définit 3 colonnes de taille égale
+//                         gap: 20px; // Espace entre les éléments (facultatif)
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
 main {
+    @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+        min-width: 1024px;
+        max-width: 1200px;
+        height: 768px;
+    }
 
     .mainBody {
         display: flex;
@@ -8,19 +42,28 @@ main {
         .sectionRight {
             padding: 50px 100px;
 
+            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                padding: 20px 50px;
+            }
+        
             .statsBlock {
                 display: flex;
                 
                 .stats {
-                    //width: 835px;
-                    width: 100%;
+                    width: 835px;
                     margin-right: 30px;
 
+                    @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                        width: 400px;
+                        margin-right: 20px;
+                    }
+
                     .blockGraphs {
-                        //display: flex;
-                        display: grid;
-                        grid-template-columns: repeat(3, 30%); // Définit 3 colonnes de taille égale
-                        gap: 20px; // Espace entre les éléments (facultatif)
+                        display: flex;
+
+                        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+                            width: 400px;
+                        }
                     }
                 }
             }

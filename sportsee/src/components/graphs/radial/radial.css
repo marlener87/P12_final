@@ -15,7 +15,7 @@
 }
 .graphiqueRadial .pourcentage {
   position: absolute;
-  z-index: 1; /* Lower z-index to be behind the chart */
+  z-index: 1;
   background-color: white;
   width: 159px;
   height: 159px;
@@ -51,6 +51,6 @@
   font-weight: 700;
 }
 .graphiqueRadial .recharts-wrapper {
-  z-index: 2; /* Ensure the chart has a higher z-index */
+  z-index: 2;
   position: relative;
 }/*# sourceMappingURL=radial.css.map */

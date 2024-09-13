@@ -85,8 +85,8 @@ const App = ({ userId }) => {
             </div>
             
             <BarChart
-                width={700}
-                height={200}
+                width={850}
+                height={225}
                 data={userActivityFactory.sessions}
                 margin={{
                     top: 0, right: 0, left: 0, bottom: 0,

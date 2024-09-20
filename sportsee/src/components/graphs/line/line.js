@@ -66,15 +66,25 @@ const LineGraph = ({ userId }) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const objectFromFactory = await UserService.getSession(userId);
-            setUserSessionFactory(objectFromFactory);
-            setIsLoading(false);
+            try{
+                const objectFromFactory = await UserService.getSession(userId);
+                setUserSessionFactory(objectFromFactory);
+                setIsLoading(false);
+            }catch(err){
+                setIsError(true);
+                setIsLoading(false);
+            }
         };
-        fetchData();
+
+        // Démonstration d'une API lente, aucun impact sur les autres composants
+        setTimeout(() => {
+            fetchData();
+        }, 2000);
+        
     }, [userId]);
 
     useEffect(() => {
-        if (isLoading) return;
+        if (isLoading || isError) return;
 
         const div = document.getElementById("graphiqueLigne");
         const background = document.querySelector('.graphiqueLigne .background');
@@ -86,7 +96,7 @@ const LineGraph = ({ userId }) => {
             background.style.width = `${100 - percentageX}%`;
         });
 
-    }, [isLoading]);
+    }, [isLoading, isError]);
 
     if (isLoading) {
         return <p>Chargement en cours...</p>;

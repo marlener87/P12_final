@@ -9,43 +9,50 @@
 }
 
 .graphiqueLigne {
-    width: 280px;
+    //width: 280px;
     //width: 30%;
-    height: 270px;
+    //height: 270px;
     //height: 30%;
+    width: 30.89%;
+    aspect-ratio: 1 / 1;
     background: $red1;
     border-radius: 5px;
     //margin-right: 35px;
     position: relative;
     overflow: hidden;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-        width: 130px;
-        height: 130px;
-        margin-right: 5px;
-        border-radius: 3px;
-    }
+    // @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+    //     width: 130px;
+    //     height: 130px;
+    //     margin-right: 5px;
+    //     border-radius: 3px;
+    // }
 
     .titleApp {
         position: absolute;
-        margin: 35px 35px 0 35px;
+        margin: 30px 30px 0 30px;
         z-index:100;
 
-        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-            margin: 15px 15px 0 15px;
-        }
+        // @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+        //     margin: 15px 15px 0 15px;
+        // }
 
         h2 {
             font-size: 15px;
             color: $white;
             font-weight: 100;
             width: 145px;
+            line-height: 20px;
 
-            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-                font-size: 8px;
-                width: 100px;
-                line-height: 15px;
+            @media all and (max-width:1260px) {
+                font-size: 12px;
             }
+
+            // @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+            //     font-size: 8px;
+            //     width: 100px;
+            //     line-height: 15px;
+            // }
         } 
     }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './bar.scss';
 import UserService from '../../../services/userService';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 /**
  * Composant personnalisé pour afficher une infobulle (tooltip) sur le graphique à barres.
@@ -84,22 +84,24 @@ const App = ({ userId }) => {
                 </ul>
             </div>
             
-            <BarChart
-                width={850}
-                height={225}
-                data={userActivityFactory.sessions}
-                margin={{
-                    top: 0, right: 0, left: 0, bottom: 0,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="day" />
-                <YAxis orientation="right" />
-                <Tooltip className="tooltip" content={<CustomTooltip />} />
-                <Legend />
-                <Bar dataKey="kilogram" fill="#282D30" barSize={7} radius={[20, 20, 0, 0]} />
-                <Bar dataKey="calories" fill="#E60000" barSize={7} radius={[20, 20, 0, 0]} />
-            </BarChart>
+            <ResponsiveContainer width="100%" height={210}>
+                <BarChart
+                    //width={850}
+                    //height={225}
+                    data={userActivityFactory.sessions}
+                    margin={{
+                        top: 0, right: 0, left: 0, bottom: 0,
+                    }}
+                >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="day" />
+                    <YAxis orientation="right" />
+                    <Tooltip className="tooltip" content={<CustomTooltip />} />
+                   {/*} <Legend />*/}
+                    <Bar dataKey="kilogram" fill="#282D30" barSize={7} radius={[20, 20, 0, 0]} />
+                    <Bar dataKey="calories" fill="#E60000" barSize={7} radius={[20, 20, 0, 0]} />
+                </BarChart>
+            </ResponsiveContainer>
         </div>
     );
 }

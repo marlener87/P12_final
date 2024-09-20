@@ -1,12 +1,15 @@
 @import '../../styles/variables.scss';
 
 .titleSection {
+    width: 100%;
+    height: auto;
+    background: lightblue;
+
     h1 {
         font-size: 48px;
 
-        //@media screen and (min-width: 1024px) { 
-        @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-            font-size: 25px;        
+        @media all and (max-width:1260px) {
+            font-size: 25px;
         }
 
         .prenomValeur {
@@ -16,12 +19,11 @@
 
     p {
         font-size: 18px;
-        margin: 40px 0 80px;
+        margin: 30px 0 0;
 
-        //@media screen and (min-width: 1024px) { 
-        @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-            font-size: 10px;    
-            margin: 15px 0 30px;    
+        @media all and (max-width:1260px) {
+            font-size: 15px;    
+            margin: 15px 0 0;    
         }
     }
 }

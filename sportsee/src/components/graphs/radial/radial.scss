@@ -1,34 +1,35 @@
 .graphiqueRadial {
-    width: 280px;
+    //width: 280px;
     //width: 30%;
-    height: 270px;
+    //height: 270px;
     //height: 30%;
+    width: 30.89%;
+    aspect-ratio: 1 / 1;
     background: #FBFBFB;
-    //background: teal;
     border-radius: 5px;
     position: relative;
 
-    @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-        width: 130px;
-        height: 130px;
-        border-radius: 3px;
-        background: teal;
-    }
+    // @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+    //     width: 130px;
+    //     height: 130px;
+    //     border-radius: 3px;
+    //     background: teal;
+    // }
 
     .titleRadial {
         position: absolute;
         margin-top: 24px;
         margin-left: 30px;
 
-        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-            margin-top: 10px;
-            margin-left: 15px;
-        }
+        // @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
+        //     margin-top: 10px;
+        //     margin-left: 15px;
+        // }
 
         h2 {
             font-size: 15px;
-            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-                font-size: 10px;
+            @media all and (max-width:1260px) { 
+                font-size: 12px;
             }
         }
     }
@@ -36,38 +37,42 @@
     .pourcentage {
         position: absolute;
         z-index: 1;
-        background-color: white;
-        width: 159px;
-        height: 159px;
+        //background-color: white;
+        background-color: teal;
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
         top: 50px;
         left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px;
+        
 
-        @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-            width: 80px;
-            height: 80px;
-            top: 25px;
-            left: 25px;
+        @media all and (max-width:1260px) { 
+            width: 140px;
+            height: 140px;
+            top: 40px;
+            left: 40px;
         }
 
         .textContainer {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            //position: absolute;
+            //display: flex;
+            //flex-direction: column;
+            //align-items: center;
+            //justify-content: center;
+            //text-align: center;
             color:#74798C;
             font-size: 16px;
-            width: 100px;
-            top: 50px;
-            left: 25px;
+            //width: 100px;
+            //top: 50px;
+            //left: 25px;
 
-            @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-                font-size: 8px;
-                width: 50px;
-                top: 20px;
-                left: 15px;
+            @media all and (max-width:1260px) { 
+                font-size: 12px;
             }
 
             .nombreScore {
@@ -75,13 +80,11 @@
                 font-size: 26px;
                 font-weight: 700;
 
-                @media only screen and (min-width: 1024px) and (max-width: 1200px) { 
-                    font-size: 15px;
-                }
+                // @media all and (max-width:1260px) {
+                //     font-size: 26px;
+                // }
             }     
-        }
-
-        
+        }  
     }
 
     .recharts-wrapper {

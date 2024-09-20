@@ -42,6 +42,8 @@ const Apport = ({userId}) => {
             
             setUserFactory(objectFromFactory);
             setIsLoading(false)
+            console.log(objectFromFactory);
+            
         }
       
         fetchData()
@@ -62,11 +64,11 @@ const Apport = ({userId}) => {
     // Je veux parcourir des données, et demander un affichage
     // Affiche la liste des apports de l'utilisateur.
     return (
-        <div className='apportBlock'>
+        <>
             {userFactory.getApports().map((item, index) => (
                 <ApportAside key={index} unit={item.unit} title={item.title} value={item.value} image={item.image} />
             ))}
-        </div>
+        </>
     );
 };
 

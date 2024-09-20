@@ -19,13 +19,17 @@ const RadarGraph = ({ userId }) => {
     useEffect(() => {
         // Fonction asynchrone pour récupérer les données de performance depuis le service utilisateur.
         const fetchData = async () => {
-            const objectFromFactory = await UserService.getPerformance(userId)
-            //console.log(objectFromFactory)
-            //console.log(objectFromFactory.kind);
+            try{
+                const objectFromFactory = await UserService.getPerformance(userId)
+                //console.log(objectFromFactory.kind);
             
-            // Mise à jour de l'état avec les données récupérées
-            setUserPerformanceFactory(objectFromFactory.data);
-            setIsLoading(false)
+                // Mise à jour de l'état avec les données récupérées
+                setUserPerformanceFactory(objectFromFactory.data);
+                setIsLoading(false)
+            }catch(err){
+                setIsError(true);
+                setIsLoading(false);
+            }
         }
       
         fetchData()

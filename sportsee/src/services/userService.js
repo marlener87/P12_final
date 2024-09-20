@@ -20,7 +20,7 @@ const API_BASE_URL_MOCKED = 'http://localhost:3001/data/'; // Données mockées
 // Fonction pour vérifier si le backend est disponible et basculer sur les données mockées si nécessaire
 // fonction qui effectue un appel 'fetch' à l'URL spécifiée, si l'appel échoue (ex : si le BE est hors ligne ou renvoie une erreur), elle bascule automatiquement sur les données mockées fournies
 const fetchWithFallback = async (url, mockData = {}) => {
-    try {
+    //try {
         // Tente de faire un appel à l'API avec l'URL fournie
         const response = await fetch(url);
         // Vérifie si la réponse n'est pas valide (ex : code d'erreur HTTP)
@@ -30,11 +30,12 @@ const fetchWithFallback = async (url, mockData = {}) => {
         }
         // Si tout se passe bien, renvoie les données au format JSON
         return await response.json();
-    } catch (error) {
+    //} catch (error) {
+      //  throw new Error(`Une erreur est survenue avec la requête`);
         // En cas d'erreur (ex : BE indisponible), affiche un message d'erreur et renvoie les données mockées
-        console.error(`Backend indisponible, utilisation des mock data: ${error}`);
-        return { data: mockData };
-    }
+        //console.error(`Backend indisponible, utilisation des mock data: ${error}`);
+        //return { data: mockData };
+    //}
 };
 
 // Service utilisateur qui fournit les méthodes pour récupérer les données formatées

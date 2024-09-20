@@ -20,15 +20,20 @@ const Radial = ({ userId }) => {
     useEffect(() => {
         // Fonction asynchrone pour récupérer le score de l'utilisateur depuis le service utilisateur.
         const fetchData = async () => {
-            const objectFromFactory = await UserService.getScore(userId);
-            //console.log(objectFromFactory);
-            const formattedData = [
-                { name: 'Score', value: objectFromFactory.score * 100, fill: '#FF0000' }
-            ];
-
-            setPercentage(objectFromFactory.score)
-            setUserScoreFactory(formattedData);
-            setIsLoading(false);
+            try{
+                const objectFromFactory = await UserService.getScore(userId);
+                //console.log(objectFromFactory);
+                const formattedData = [
+                    { name: 'Score', value: objectFromFactory.score * 100, fill: '#FF0000' }
+                ];
+            
+                setPercentage(objectFromFactory.score)
+                setUserScoreFactory(formattedData);
+                setIsLoading(false);
+            }catch(err){
+                setIsError(true)
+                setIsLoading(false);
+            }
         }
         fetchData()
     }, [userId]); // Dépendance sur l'userId, le hook se ré-exécutera si l'userId change
@@ -50,8 +55,8 @@ const Radial = ({ userId }) => {
           </div>
           <ResponsiveContainer width="100%" height="100%" >
               <RadialBarChart 
-                  cx="50%" 
-                  cy="50%" 
+                  cx="51%" 
+                  cy="51%" 
                   innerRadius="80%" 
                   outerRadius="70%" 
                   barSize={10} 

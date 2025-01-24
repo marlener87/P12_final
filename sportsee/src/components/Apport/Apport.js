@@ -28,7 +28,7 @@ const Apport = ({userId}) => {
      * État pour indiquer si une erreur s'est produite lors de la récupération des données.
      * @type {[boolean, Function]} 
      */
-    const [isError, setIsError] = useState(false);
+    const [isError] = useState(false);
 
     /**
      * Utilise `useEffect` pour récupérer les données utilisateur lorsque `userId` change.

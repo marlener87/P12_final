@@ -13,11 +13,14 @@ const NavbarHorizontale = () => {
     return (
         <header className='headerHorizontal'>
             <img className='logo' src={logo} alt='logo du site Sportsee' />
-            
-            <NavLink className='navbarLink' >Accueil</NavLink>
-            <NavLink className='navbarLink' >Profil</NavLink>
-            <NavLink className='navbarLink' >Réglage</NavLink>
-            <NavLink className='navbarLink' >Communauté</NavLink>
+            <nav className='navbar'>
+                <ul class='navbarList'>
+                    <li className='navbarItem'><NavLink className='navbarLink' >Accueil</NavLink></li>
+                    <li className='navbarItem'><NavLink className='navbarLink' >Profil</NavLink></li>
+                    <li className='navbarItem'><NavLink className='navbarLink' >Réglages</NavLink></li>
+                    <li className='navbarItem'><NavLink className='navbarLink' >Communauté</NavLink></li>
+                </ul>
+            </nav>
         </header>
     );
 };

@@ -14,6 +14,14 @@ const CustomTooltip = ({ active, payload }) => {
     return null;
 };
 
+/**
+ * Composant CustomCursor pour afficher un curseur personnalisé dans le graphique.
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {Array} props.points - Tableau de points pour le curseur.
+ * @param {number} props.width - Largeur du curseur.
+ * @param {number} props.height - Hauteur du curseur.
+ * @returns {JSX.Element} Le curseur rendu sous forme de rectangle.
+ */
 const CustomCursor = (props) => {
     const { points, width, height } = props;
     const { x, y } = points[0];
@@ -30,6 +38,14 @@ const CustomCursor = (props) => {
     );
 };
 
+
+/**
+ * Composant CustomizedDot pour afficher des points personnalisés sur la ligne du graphique.
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {number} props.cx - Coordonnée X du centre du point.
+ * @param {number} props.cy - Coordonnée Y du centre du point.
+ * @returns {JSX.Element} Le point personnalisé rendu.
+ */
 const CustomizedDot = (props) => {
     const { cx, cy } = props;
 
@@ -50,13 +66,13 @@ const LineGraph = ({ userId }) => {
 
     const [perc, setPerc] = useState(0);
 
-    const onMouseMove = hoveredData => {
-        if (hoveredData && hoveredData.activePayload) {
-            const hoveredX = hoveredData.activePayload[0].payload.day;
-            const index = userSessionFactory.sessions.findIndex(d => d.day === hoveredX);
-            const percentage = ((userSessionFactory.sessions.length - index - 1) * 100) / (userSessionFactory.sessions.length - 1);
-        } 
-    };
+    //const onMouseMove = hoveredData => {
+        //if (hoveredData && hoveredData.activePayload) {
+            //const hoveredX = hoveredData.activePayload[0].payload.day;
+            //const index = userSessionFactory.sessions.findIndex(d => d.day === hoveredX);
+            //const percentage = ((userSessionFactory.sessions.length - index - 1) * 100) / (userSessionFactory.sessions.length - 1);
+        //} 
+    //};
 
     const onMouseOut = () => {
         const div = document.querySelector('.graphiqueLigne .background')                    
@@ -76,7 +92,7 @@ const LineGraph = ({ userId }) => {
             }
         };
 
-        // Démonstration d'une API lente, aucun impact sur les autres composants
+        //Démonstration d'une API lente, aucun impact sur les autres composants
         setTimeout(() => {
             fetchData();
         }, 2000);
@@ -123,7 +139,7 @@ const LineGraph = ({ userId }) => {
                         left: -60,
                         bottom: 20,
                     }}
-                    onMouseMove={onMouseMove}
+                    //onMouseMove={onMouseMove}
                     onMouseOut={onMouseOut}
                 >
                     <defs>

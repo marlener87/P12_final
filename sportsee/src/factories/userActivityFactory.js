@@ -4,7 +4,6 @@
 class UserActivityFactory {
     /**
      * Crée une instance de `UserActivityFactory`.
-     * 
      * @param {Object} dataFromApi - Les données d'activité utilisateur récupérées depuis l'API.
      * @param {Object} dataFromApi.data - Les données principales fournies par l'API.
      * @param {Array<Object>} dataFromApi.data.sessions - Tableau des sessions d'activité utilisateur.

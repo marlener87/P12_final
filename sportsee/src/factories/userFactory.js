@@ -7,7 +7,7 @@ class UserFactory {
      * 
      * @param {Object} dataFromApi - Les données utilisateur récupérées depuis l'API.
      * @param {Object} dataFromApi.data - Les données principales fournies par l'API.
-     * @param {Object} dataFromApi.data.keyData - Les données clés de l'utilisateur, telles que les compteurs de calories, protéines, glucides, et lipides.
+     * @param {Object} dataFromApi.data.keyData - Les données clés de l'utilisateur, telles que les compteurs de calories, protéines, glucides et lipides.
      * @param {Object} dataFromApi.data.userInfos - Les informations sur l'utilisateur, telles que son nom et son prénom.
      * @param {number} dataFromApi.data.score - Le score associé à l'utilisateur.
      * @param {number} dataFromApi.data.id - L'identifiant unique de l'utilisateur.

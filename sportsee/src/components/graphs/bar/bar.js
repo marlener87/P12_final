@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './bar.scss';
 import UserService from '../../../services/userService';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 /**
  * Composant personnalisé pour afficher une infobulle (tooltip) sur le graphique à barres.
@@ -24,9 +24,7 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 /**
- * Composant principal de l'application qui affiche un graphique à barres représentant
- * l'activité quotidienne d'un utilisateur.
- *
+ * Composant principal de l'application qui affiche un graphique à barres représentant l'activité quotidienne d'un utilisateur.
  * @param {Object} props - Les propriétés passées au composant.
  * @param {number} props.userId - L'ID de l'utilisateur pour lequel récupérer les données d'activité.
  * @returns {JSX.Element} Le composant React.
@@ -90,7 +88,7 @@ const App = ({ userId }) => {
                     //height={225}
                     data={userActivityFactory.sessions}
                     margin={{
-                        top: 0, right: 0, left: 0, bottom: 0,
+                        top: 0, right: 0, left: 30, bottom: 0,
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />

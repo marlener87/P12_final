@@ -22,6 +22,9 @@ const Home = () => {
     // Récupération de l'ID depuis l'URL
     const { id } = useParams();
     //console.log("ID from URL:", id);
+    
+    //const id = '12'; // Connexion avec Charles
+    //const id = '18'; // Connexion avec Cécile
 
     // State pour stocker l'userId (par défaut 12)
     const [userId, setUserId] = useState(null);
@@ -30,39 +33,45 @@ const Home = () => {
 
     // Utilisation du useEffect pour surveiller les changements d'ID dans l'URL
     useEffect(() => {
-
         const newId = parseInt(id, 10); // => NaN => NotANumber
 
         // isNaN("abc") => true
         // isNaN(12) => false        
 
-        if(isNaN(newId)){
+        if (isNaN(newId)){
             setIsError(true); 
             setIsLoading(false);
-        }else {
+            return;  // Empêche l'exécution de setUserId si une erreur est détectée
+        } else {
             // Si un id est fourni dans l'URL, on l'utilise
             setUserId(newId);
+            setIsLoading(false); // Désactiver le chargement une fois l'ID défini
         }
 
     }, [id]);  // Ce useEffect se déclenchera à chaque fois que l'ID change
    
 
-    useEffect(() => {
-        if(userId){
-            setIsLoading(false);
-        }
-    }, [userId])
-
-
-    if (isLoading) {
-        return <p>chargement en cours..</p>
-    }
+    // useEffect(() => {
+    //     if (userId){
+    //         setIsLoading(false);
+    //     }
+    // }, [userId])
 
     if (isError) {
         return (
             <ErrorPage />
         )
     }
+
+    if (isLoading) {
+        return <p>chargement en cours..</p>
+    }
+
+    // if (isError) {
+    //     return (
+    //         <ErrorPage />
+    //     )
+    // }
 
     return (
         <main>

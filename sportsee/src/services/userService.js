@@ -7,9 +7,10 @@ import UserPerformanceFactory from '../factories/userPerformanceFactory';
 
 // URL de base de l'API backend
 const ENVIRONMENT = 'dev' // 'prod' | 'dev'
+console.log(`Environnement utilisé : ${ENVIRONMENT === 'dev' ? 'Données mockées' : 'Serveur de production'}`);
+
 const API_BASE_URL = 'http://localhost:3000/user/'; // Production
 const API_BASE_URL_MOCKED = 'http://localhost:3001/data/'; // Données mockées
-
 
 // Objectifs du service : 
 // - Aller chercher les données sur le serveur (fetch, axios, ..)
@@ -19,7 +20,8 @@ const API_BASE_URL_MOCKED = 'http://localhost:3001/data/'; // Données mockées
 
 // Fonction pour vérifier si le backend est disponible et basculer sur les données mockées si nécessaire
 // fonction qui effectue un appel 'fetch' à l'URL spécifiée, si l'appel échoue (ex : si le BE est hors ligne ou renvoie une erreur), elle bascule automatiquement sur les données mockées fournies
-const fetchWithFallback = async (url, mockData = {}) => {
+//const fetchWithFallback = async (url, mockData = {}) => {
+const fetchWithFallback = async (url = {}) => {
     //try {
         // Tente de faire un appel à l'API avec l'URL fournie
         const response = await fetch(url);

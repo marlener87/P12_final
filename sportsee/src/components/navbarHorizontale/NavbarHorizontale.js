@@ -26,11 +26,3 @@ const NavbarHorizontale = () => {
 };
 
 export default NavbarHorizontale;
-
-/*
-<nav className='navHorizontale'>
-</nav>
-
-<Link to="/" className='logoContainer'>
-</Link>
-*/

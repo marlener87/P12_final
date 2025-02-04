@@ -43,7 +43,6 @@ const Apport = ({userId}) => {
             setUserFactory(objectFromFactory);
             setIsLoading(false)
             console.log(objectFromFactory);
-            
         }
       
         fetchData()

@@ -84,8 +84,6 @@ const App = ({ userId }) => {
             
             <ResponsiveContainer width="100%" height={210}>
                 <BarChart
-                    //width={850}
-                    //height={225}
                     data={userActivityFactory.sessions}
                     margin={{
                         top: 0, right: 0, left: 30, bottom: 0,
@@ -93,11 +91,12 @@ const App = ({ userId }) => {
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="day" />
-                    <YAxis orientation="right" />
+                    <YAxis orientation="right" dataKey="kilogram" domain={["dataMin -1", "dataMax +1"]} />
+                    <YAxis yAxisId="left" dataKey="calories" orientation="left" axisLine={false} tickLine={false} domain={["dataMin-50", "dataMax+50"]} hide />
                     <Tooltip className="tooltip" content={<CustomTooltip />} />
-                   {/*} <Legend />*/}
-                    <Bar dataKey="kilogram" fill="#282D30" barSize={7} radius={[20, 20, 0, 0]} />
-                    <Bar dataKey="calories" fill="#E60000" barSize={7} radius={[20, 20, 0, 0]} />
+ 
+                    <Bar dataKey="kilogram" fill="#282D30" barSize={7} radius={[20, 20, 0, 0]}  />
+                    <Bar dataKey="calories" yAxisId="left" fill="#E60000" barSize={7} radius={[20, 20, 0, 0]} />
                 </BarChart>
             </ResponsiveContainer>
         </div>

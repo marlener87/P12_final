@@ -66,14 +66,6 @@ const LineGraph = ({ userId }) => {
 
     const [perc, setPerc] = useState(0);
 
-    //const onMouseMove = hoveredData => {
-        //if (hoveredData && hoveredData.activePayload) {
-            //const hoveredX = hoveredData.activePayload[0].payload.day;
-            //const index = userSessionFactory.sessions.findIndex(d => d.day === hoveredX);
-            //const percentage = ((userSessionFactory.sessions.length - index - 1) * 100) / (userSessionFactory.sessions.length - 1);
-        //} 
-    //};
-
     const onMouseOut = () => {
         const div = document.querySelector('.graphiqueLigne .background')                    
         div.style.width = `0`;
@@ -139,7 +131,6 @@ const LineGraph = ({ userId }) => {
                         left: -60,
                         bottom: 20,
                     }}
-                    //onMouseMove={onMouseMove}
                     onMouseOut={onMouseOut}
                 >
                     <defs>
@@ -168,8 +159,8 @@ const LineGraph = ({ userId }) => {
                         dataKey="sessionLength" 
                         stroke="url(#colorUv)"
                         strokeWidth={2} 
-                        activeDot={<CustomizedDot />} // Active dot only on hover
-                        dot={false} // Disable default dots
+                        activeDot={<CustomizedDot />} // point actif uniquement en survol
+                        dot={false} // désactiver les points par défaut
                     />
                 </LineChart>
             </ResponsiveContainer>

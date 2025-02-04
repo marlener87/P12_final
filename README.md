@@ -17,7 +17,7 @@ Le projet utilise [Yarn](https://yarnpkg.com/) 1.22.22 comme gestionnaire de pac
 1 - Installer NodeJs
 2 - Installer Yarn
 3 - Cloner ou télécharger l'[API backend](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
-4 - Ouvrir le dossier API puis installer toutes les dépendances requises avec `yarn install` puis le lancer avec `yarn run dev`
+4 - Ouvrir le dossier API puis installer toutes les dépendances requises avec `yarn install` puis le lancer avec `yarn run start`
 5 - Cloner ou télécharger l'[application du projet](https://github.com/marlener87/P12_dev_tableau_bord_analytics_React)
-6 - Dans un nouveau terminal aller dans le dossier 'sportsee' (`cd sportsee`), puis lancer la commande `npm run start`
+6 - Dans un nouveau terminal aller dans le dossier 'sportsee' (`cd sportsee`), puis installer les dépendances avec `npm install` et lancer la commande `npm run start`.
 

@@ -38,11 +38,11 @@ const Apport = ({userId}) => {
     useEffect(() => {
         const fetchData = async () => {
             const objectFromFactory = await UserService.getUser(userId)
-            console.log(objectFromFactory.keyData)
+            //console.log(objectFromFactory.keyData)
             
             setUserFactory(objectFromFactory);
             setIsLoading(false)
-            console.log(objectFromFactory);
+            //console.log(objectFromFactory);
         }
       
         fetchData()

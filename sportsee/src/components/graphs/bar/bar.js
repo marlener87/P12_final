@@ -41,7 +41,7 @@ const App = ({ userId }) => {
             try {
                 // Appel du service pour récupérer les données d'activité de l'utilisateur
                 const objectFromFactory = await UserService.getActivity(userId);
-                console.log(objectFromFactory);
+                //console.log(objectFromFactory);
 
                 // Transformation des dates en numéros de jours
                 const transformedData = objectFromFactory.sessions.map((session, index) => ({

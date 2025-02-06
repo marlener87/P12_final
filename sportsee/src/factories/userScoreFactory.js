@@ -10,7 +10,7 @@ class UserScoreFactory {
      * @param {number} dataFromApi.data.score - Le score associé à l'utilisateur.
      */
     constructor(dataFromApi) {
-        console.log(dataFromApi);
+        //console.log(dataFromApi);
         
         // Format à utiliser dans l'application = format qui vient de l'API
         // Unifie score et todayScore, utilise celui qui est disponible

@@ -22,40 +22,28 @@ const Home = () => {
     // Récupération de l'ID depuis l'URL
     const { id } = useParams();
     //console.log("ID from URL:", id);
-    
-    //const id = '12'; // Connexion avec Charles
-    //const id = '18'; // Connexion avec Cécile
 
-    // State pour stocker l'userId (par défaut 12)
+    // State pour stocker l'userId 
     const [userId, setUserId] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
     // Utilisation du useEffect pour surveiller les changements d'ID dans l'URL
     useEffect(() => {
-        const newId = parseInt(id, 10); // => NaN => NotANumber
+        // convertit id en un nombre entier en base 10. Si id n'est pas convertible (ex: une chaîne non numérique), le résultat sera NaN (Not-a-Number)
+        const newId = parseInt(id, 10); // en base 10, système décimal
 
-        // isNaN("abc") => true
-        // isNaN(12) => false        
-
-        if (isNaN(newId)){
-            setIsError(true); 
-            setIsLoading(false);
+        if (isNaN(newId)){ // Vérifie si le résultat de parseInt est NaN
+            setIsError(true); // on met à jour l'état pour signaler une erreur.
+            setIsLoading(false); // on désactive l'indicateur de chargement
             return;  // Empêche l'exécution de setUserId si une erreur est détectée
         } else {
             // Si un id est fourni dans l'URL, on l'utilise
-            setUserId(newId);
-            setIsLoading(false); // Désactiver le chargement une fois l'ID défini
+            setUserId(newId); // on met à jour l'état avec le nouvel id converti
+            setIsLoading(false); // désactiver le chargement une fois l'ID défini puisque tout s'est bien passé
         }
 
-    }, [id]);  // Ce useEffect se déclenchera à chaque fois que l'ID change
-   
-
-    // useEffect(() => {
-    //     if (userId){
-    //         setIsLoading(false);
-    //     }
-    // }, [userId])
+    }, [id]);  // Ce useEffect se déclenchera à chaque fois que l'ID change, il passé en dépendance   
 
     if (isError) {
         return (
@@ -66,12 +54,6 @@ const Home = () => {
     if (isLoading) {
         return <p>chargement en cours..</p>
     }
-
-    // if (isError) {
-    //     return (
-    //         <ErrorPage />
-    //     )
-    // }
 
     return (
         <main>

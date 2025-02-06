@@ -19,7 +19,7 @@ const API_BASE_URL_MOCKED = 'http://localhost:3001/data/'; // Données mockées
 
 
 // Fonction pour vérifier si le backend est disponible et basculer sur les données mockées si nécessaire
-// fonction qui effectue un appel 'fetch' à l'URL spécifiée, si l'appel échoue (ex : si le BE est hors ligne ou renvoie une erreur), elle bascule automatiquement sur les données mockées fournies
+// fonction qui effectue un appel 'fetch' à l'URL spécifiée, si l'appel échoue (ex : si le backend est hors ligne ou renvoie une erreur), elle bascule automatiquement sur les données mockées fournies
 const fetchWithFallback = async (url = {}) => {
     // Tente de faire un appel à l'API avec l'URL fournie
     const response = await fetch(url);

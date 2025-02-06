@@ -13,9 +13,9 @@ class UserFactory {
      * @param {number} dataFromApi.data.id - L'identifiant unique de l'utilisateur.
      */
     constructor(dataFromApi){
-        console.log(dataFromApi)
+        //console.log(dataFromApi)
 
-        // Format à utiliser dans l'application = format qui viens de l'API
+        // Format à utiliser dans l'application = format qui vient de l'API
         this.keyData = dataFromApi.data.keyData;
         this.userInfos = dataFromApi.data.userInfos;
         this.score = dataFromApi.data.score;

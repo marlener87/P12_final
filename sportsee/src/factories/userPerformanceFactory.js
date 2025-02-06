@@ -12,7 +12,7 @@ class UserPerformanceFactory {
      * @param {Object} dataFromApi.data.kind - Objet associant chaque type de performance (clé) à son nom (valeur).
      */
     constructor(dataFromApi) {
-        console.log(dataFromApi);
+        //console.log(dataFromApi);
         
         // Format à utiliser dans l'application = format qui viens de l'API
         this.data = dataFromApi.data.data;

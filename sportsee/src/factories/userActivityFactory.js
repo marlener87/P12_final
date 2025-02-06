@@ -9,7 +9,7 @@ class UserActivityFactory {
      * @param {Array<Object>} dataFromApi.data.sessions - Tableau des sessions d'activité utilisateur.
      */
     constructor(dataFromApi) {
-        console.log(dataFromApi);
+        //console.log(dataFromApi);
         
         // Format à utiliser dans l'application = format qui viens de l'API
         this.sessions = dataFromApi.data.sessions;
